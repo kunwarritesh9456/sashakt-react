@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6";
-import "./Footer.css";
+import "./footer.css";
 
 export default function Footer({
   image = "/footer-image.png",
