@@ -66,6 +66,7 @@ export default function Footer({
             <NavLink to="/terms">Terms of Use</NavLink>
             <NavLink to="/privacy">Privacy Policy</NavLink>
             <NavLink to="/refund">Refund Policy</NavLink>
+            <NavLink to="/refund">Terms And Condition</NavLink>
           </div>
 
         </div>
