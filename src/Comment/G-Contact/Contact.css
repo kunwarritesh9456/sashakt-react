@@ -1,0 +1,232 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===============================
+   SECTION
+================================ */
+.contact-section {
+  padding: 80px 40px;
+  background: #e6e6e4;
+}
+
+/* ===============================
+   MAIN WRAPPER
+================================ */
+.contact-wrapper {
+  position: relative;
+  max-width: 1280px;
+  margin: auto;
+  border-radius: 36px;
+  overflow: hidden;
+  min-height: 700px;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+/* ===============================
+   BACKGROUND IMAGE
+================================ */
+.bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* ===============================
+   OVERLAY
+================================ */
+.overlay {
+  position: absolute;
+  inset: 0;
+  /*background: rgba(0, 0, 0, 0.45);*/
+  z-index: 2;
+}
+
+/* ===============================
+   LEFT CONTENT
+================================ */
+.contact-left {
+  position: relative;
+  z-index: 3;
+  padding: 56px 52px;
+  color: #fff;
+}
+
+.contact-left span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+.contact-left h1 {
+  font-size: 46px;
+  line-height: 1.15;
+  margin: 18px 0 16px;
+  font-weight: 700;
+}
+
+.contact-left p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  max-width: 420px;
+  margin-bottom: 32px;
+}
+
+/* ===============================
+   INFO CARD
+================================ */
+.info-card {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 20px;
+
+  padding: 22px 24px;
+  max-width: 380px;
+}
+
+.info-card div {
+  margin-bottom: 16px;
+}
+
+.info-card small {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.info-card p {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* ===============================
+   SOCIAL ICONS
+================================ */
+.socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.socials div {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ===============================
+   RIGHT FORM
+================================ */
+.contact-form {
+  position: relative;
+  z-index: 3;
+
+  margin: 56px;
+  padding: 36px;
+
+  border-radius: 24px;
+  
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  background: rgba(255, 255, 255, 0.18);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 12px;
+  color:white;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+ /* background: rgba(255, 255, 255, 0.15);*/
+  border: 1px solid white;
+  padding: 12px 14px;
+  border-radius: 10px;
+
+  color: #fff;
+  margin-bottom: 16px;
+  outline: none;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 96px;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.contact-form button {
+  margin-top: 10px;
+  background: #ff6b2d;
+  color: #fff;
+  border: none;
+
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #ff541a;
+}
+.placeholder{
+  background: white;
+  border: 1px solid white;
+  padding: 12px 14px;
+  border-radius: 10px;}
+  .input .placeholder{
+    color: white;
+  }
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 50px 16px;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .contact-left {
+    padding: 36px 24px;
+  }
+
+  .contact-left h1 {
+    font-size: 34px;
+  }
+
+  .info-card {
+    max-width: 100%;
+  }
+
+  .contact-form {
+    margin: 20px;
+    padding: 28px;
+  }
+}

@@ -1,0 +1,182 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:system-ui;
+}
+
+/* SECTION */
+
+.services-section{
+background:#071a34;
+color:white;
+padding:120px 0;
+}
+
+/* CONTAINER */
+
+.services-container{
+max-width:1200px;
+margin:auto;
+padding:0 40px;
+}
+
+/* LABEL */
+
+.services-label{
+font-size:14px;
+opacity:.7;
+letter-spacing:.1em;
+margin-bottom:18px;
+}
+
+/* TITLE */
+
+.services-heading{
+font-size:42px;
+font-weight:600;
+margin-bottom:80px;
+}
+
+/* LIST */
+
+.services-list{
+display:flex;
+flex-direction:column;
+}
+
+/* SERVICE ITEM */
+
+.service-item{
+border-bottom:1px solid rgba(255,255,255,0.15);
+padding:40px 0;
+}
+
+/* HEADER */
+
+.service-header{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+cursor:pointer;
+}
+
+/* LEFT */
+
+.service-left{
+display:flex;
+gap:50px;
+}
+
+/* NUMBER */
+
+.service-number{
+font-size:18px;
+opacity:.7;
+min-width:40px;
+}
+
+/* TITLE */
+
+.service-title{
+font-size:52px;
+font-weight:500;
+line-height:1.1;
+}
+
+/* ICON */
+
+.service-icon{
+font-size:34px;
+opacity:.8;
+}
+
+/* CONTENT */
+
+.service-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:60px;
+
+max-height:0;
+overflow:hidden;
+transition:all .5s ease;
+opacity:0;
+}
+
+/* OPEN */
+
+.service-content.open{
+max-height:500px;
+margin-top:40px;
+opacity:1;
+}
+
+/* TEXT */
+
+.service-text{
+max-width:520px;
+line-height:1.7;
+opacity:.85;
+}
+
+/* IMAGE */
+
+.service-image{
+width:260px;
+height:auto;
+border-radius:6px;
+object-fit:cover;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:900px){
+
+.services-heading{
+font-size:32px;
+margin-bottom:60px;
+}
+
+.service-title{
+font-size:34px;
+}
+
+.service-left{
+gap:25px;
+}
+
+.service-content{
+flex-direction:column;
+align-items:flex-start;
+gap:30px;
+}
+
+.service-image{
+width:100%;
+}
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width:600px){
+
+.services-section{
+padding:80px 0;
+}
+
+.services-container{
+padding:0 24px;
+}
+
+.service-title{
+font-size:26px;
+}
+
+.service-number{
+font-size:14px;
+}
+
+}

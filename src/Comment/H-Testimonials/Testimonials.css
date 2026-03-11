@@ -1,0 +1,146 @@
+/* =============================
+   GLOBAL RESET + SMOOTH SCROLL
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =============================
+   TESTIMONIALS SECTION
+============================= */
+.testimonials-section {
+  background: #e6e6e4;
+  padding: 100px 60px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Section header */
+.section-tag {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #000;
+}
+
+/* =============================
+   HORIZONTAL SCROLL CONTAINER
+============================= */
+.testimonials-scroll {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+
+  /* Hide scrollbar */
+  -ms-overflow-style: none;   /* IE & Edge */
+  scrollbar-width: none;      /* Firefox */
+}
+
+/* Chrome / Safari */
+.testimonials-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* =============================
+   TESTIMONIAL CARD
+============================= */
+.testimonial-card {
+  min-width: 380px;
+  max-width: 380px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  scroll-snap-align: start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Stars */
+.stars {
+  color: #ffb400;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+/* Review text */
+.review {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #000;
+  margin-bottom: 28px;
+}
+
+/* =============================
+   CLIENT INFO
+============================= */
+.client {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.client img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.client-info span {
+  font-size: 13px;
+  color: #666;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+@media (max-width: 1024px) {
+  .testimonial-card {
+    min-width: 340px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials-section {
+    padding: 70px 20px;
+  }
+
+  .testimonial-card {
+    min-width: 280px;
+    padding: 26px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+}
