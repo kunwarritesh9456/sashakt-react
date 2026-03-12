@@ -34,7 +34,7 @@ function Journey() {
                 Translating insights into initial layouts, mood imagery, and
                 volumetric ideas that define the overall direction.
               </p>
-              <img src="public/process.png" alt="image" />
+              <img src="process.png" alt="image" />
             </div>
              </div>
              </div>
@@ -49,7 +49,7 @@ function Journey() {
                 Refining plans, elevations, materials, and details, while
                 coordinating structure, services, and technical constraints.
               </p>
-              <img src="public/process.png" alt="image" />
+              <img src="process.png" alt="image" />
             </div>
 
             <div className="card-three">
@@ -59,7 +59,7 @@ function Journey() {
                 Producing clear drawings, specifications, and schedules to
                 guide consultants, contractors, and on-site execution.
               </p>
-              <img src="public/process.png" alt="image" />
+              <img src="process.png" alt="image" />
             </div>
 
             <div className="card-three">
@@ -69,7 +69,7 @@ function Journey() {
                 Periodic site visits, design clarifications, and quality checks
                 to align the built outcome with the approved design.
               </p>
-              <img src="public/process.png" alt="image" />
+              <img src="process.png" alt="image" />
             </div>
 </div>
 
