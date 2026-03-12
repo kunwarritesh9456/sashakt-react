@@ -1,76 +1,100 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6";
-import "./footer.css";
+import "./Footer.css"
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
-export default function Footer({
-  image = "/footer-image.png",
-  email = "Sashaktarchitect@gmail.com",
-  phone = "+91 82678 79678",
-  address = "Raipur Rd, Kailash Vihar, Ladpur, Dehradun, Uttarakhand 248008",
-}) {
+const ContactFooter = () => {
   return (
-    <footer className="footer">
+    <section id="footer" className="contact-footer">
       <div className="footer-container">
 
         {/* LEFT IMAGE */}
         <div className="footer-image">
-          <img src={image} alt="Architecture" />
+          <img
+            src="/service.image.png" 
+            alt="Architecture"
+            width="357vw"
+            />
         </div>
 
         {/* RIGHT CONTENT */}
         <div className="footer-content">
 
-          {/* TOP */}
           <div className="footer-top">
             <h2>
               Let’s Turn Your Vision <br /> into Built Form
             </h2>
 
-            <NavLink to="/contact" className="inquiry-btn">
-              Send Inquiry
-            </NavLink>
+            {/* FIXED BUTTON */}
+          <button className="inquiry-btn">Send Inquiry</button>
+
           </div>
 
-          <div className="divider"></div>
+          <hr />
 
-          {/* MIDDLE */}
           <div className="footer-middle">
-            <div className="footer-info">
-              <p>{email}</p>
-              <p>{phone}</p>
-              <p>{address}</p>
 
-              <div className="footer-socials">
-                <a href="#"><FaFacebookF /></a>
-                <a href="#"><FaInstagram /></a>
-                <a href="#"><FaXTwitter /></a>
-                <a href="#"><FaYoutube /></a>
+            {/* Contact Info */}
+            <div className="contact-info">
+              <p className="email">
+                <a href="mailto:Sashaktarchitect@gmail.com">
+                  Sashaktarchitect@gmail.com
+                </a>
+              </p>
+
+              <p className="phone">
+                <a href="tel:+918267879678">
+                  +91 82678 79678
+                </a>
+              </p>
+
+              <p className="address">
+                Raipur Rd, Kailash Vihar, Ladpur, Dehradun,<br />
+                Uttarakhand 248008
+              </p>
+
+              {/* SOCIAL ICONS */}
+              <div className="social-icons">
+                <a href="https://www.facebook.com/sashaktarchitect" target="_blank" rel="noopener noreferrer">
+                  <FaFacebookF />
+                </a>
+                <a href="https://www.instagram.com/sashaktarchitect" target="_blank" rel="noopener noreferrer">
+                  <FaInstagram />
+                </a>
+                <a href="https://www.twitter.com/sashaktarchitect" target="_blank" rel="noopener noreferrer">
+                  <FaXTwitter />
+                </a>
+                <a href="https://www.youtube.com/@sashaktarchitect" target="_blank" rel="noopener noreferrer">
+                  <FaYoutube />
+                </a>
               </div>
             </div>
 
-            {/* ROUTER LINKS */}
+            {/* Navigation */}
             <div className="footer-links">
-              <NavLink to="/">Home</NavLink>
-              <NavLink to="/services">Services</NavLink>
-              <NavLink to="/work">Work</NavLink>
-              <NavLink to="/about">About</NavLink>
-              <NavLink to="/blog">Blog</NavLink>
+              <p><a href="#">Home</a></p>
+              <p><a href="#Services">Services</a></p>
+              <p><a href="#Work">Work</a></p>
+              <p><a href="#about">About</a></p>
+              <p><a href="#Blog">Blog</a></p>
             </div>
+
           </div>
 
-          <div className="divider"></div>
+          <hr />
 
-          {/* BOTTOM */}
-          <div className="footer-bottom">
-            <NavLink to="/terms">Terms of Use</NavLink>
-            <NavLink to="/privacy">Privacy Policy</NavLink>
-            <NavLink to="/refund">Refund Policy</NavLink>
-            <NavLink to="/refund">Terms And Condition</NavLink>
-          </div>
+    <div className="footer-bottom">
+  <a href="#">Terms of Use</a>
+  <span className="divider">|</span>
+  <a href="#">Privacy Policy</a>
+  <span className="divider">|</span>
+  <a href="#">Refund Policy</a>
+</div>
+
 
         </div>
       </div>
-    </footer>
+    </section>
   );
-}
+};
+
+export default ContactFooter;

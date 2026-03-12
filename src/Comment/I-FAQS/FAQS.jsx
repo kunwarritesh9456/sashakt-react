@@ -1,100 +1,96 @@
+import "./FAQS.css"
 import React, { useState } from "react";
-import faqImg from "./image.png";
-import "./FAQS.css";
 
-const faqs = [
+
+const faqData = [
   {
     question: "What industries do you serve?",
     answer:
-      "We work across key global sectors - Healthcare & Pharma, Real Estate & Construction, Manufacturing, Hospitality, IT & E-Commerce, and Energy & Infrastructure specific accounting, financial, and strategic guidance."
+      "We work across residential, commercial, hospitality, and mixed-use developments."
+  },
+  {
+    question: "Do you provide turnkey solutions?",
+    answer:
+      "Yes, we manage projects from concept to completion."
   },
   {
     question: "How long does a project take?",
     answer:
-      "We work across key global sectors - Healthcare & Pharma, Real Estate & Construction, Manufacturing, Hospitality, IT & E-Commerce, and Energy & Infrastructure specific accounting, financial, and strategic guidance."
+      "Timelines depend on scope, approvals, and execution complexity."
   },
   {
-    question: "Do you offer custom solutions?",
+    question: "Do you offer interior design?",
     answer:
-      "We work across key global sectors - Healthcare & Pharma, Real Estate & Construction, Manufacturing, Hospitality, IT & E-Commerce, and Energy & Infrastructure specific accounting, financial, and strategic guidance."
+      "Yes, we provide premium interior design and decoration services."
   },
   {
-    question: "What is your pricing model?",
+    question: "Can designs be customized?",
     answer:
-     "We work across key global sectors - Healthcare & Pharma, Real Estate & Construction, Manufacturing, Hospitality, IT & E-Commerce, and Energy & Infrastructure specific accounting, financial, and strategic guidance."
+      "Absolutely. Every project is tailored to client needs and budget."
   },
   {
-    question: "Do you provide support after delivery?",
+    question: "Do you handle approvals?",
     answer:
-      "Yes, we provide ongoing maintenance and support after project completion."
+      "Yes, we assist with required drawings and authority approvals."
   },
   {
-    question: "Where are you located?",
+    question: "What is your design process?",
     answer:
-      "We work across key global sectors - Healthcare & Pharma, Real Estate & Construction, Manufacturing, Hospitality, IT & E-Commerce, and Energy & Infrastructure specific accounting, financial, and strategic guidance."
-  },
-  {
-    question: "How can we contact you?",
-    answer:
-      "We work across key global sectors - Healthcare & Pharma, Real Estate & Construction, Manufacturing, Hospitality, IT & E-Commerce, and Energy & Infrastructure specific accounting, financial, and strategic guidance."
+      "Our process includes concept, design development, and execution."
   }
 ];
 
-const FAQS = () => {
+export default function Blog() {
   const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleFAQ = (index) => {
+  const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="faq-section">
+    <section  id="Blog" className="faq">
       <div className="faq-wrapper">
 
-        {/* LEFT */}
-        <div className="faq-left">
+              {/* lefte CONTENT */}
+        <div className="faq-lefte">
           <span className="faq-tag">• FAQs</span>
+          <h2>Frequently asked<br />questions</h2>
+             </div>
+  
 
-          <h1>
-            Frequently asked <br /> questions
-          </h1>
-
-          <div className="faq-image">
-            <img src={faqImg} alt="FAQ" />
-          </div>
+        {/* LEFT IMAGE */}
+        <div className="faq-left">
+          <img
+            src="image.png"
+            alt="Architecture"
+          />
         </div>
 
-        {/* RIGHT */}
-        <div className="faq-right">
-          {faqs.map((item, index) => (
-            <div key={index} className="faq-item">
-
+          <div className="faq-list">
+            {faqData.map((item, index) => (
               <div
-                className="faq-question"
-                onClick={() => toggleFAQ(index)}
+                className={`faq-item ${openIndex === index ? "open" : ""}`}
+                key={index}
+                onClick={() => toggle(index)}
               >
-                <span>{item.question}</span>
+                <div className="faq-question">
+                  <span>{item.question}</span>
+                  <span className="arrow">
+                    {openIndex === index ? "x" : "✓"}
+                  </span>
+                </div>
 
-                <span
-                  className={`arrow ${
-                    openIndex === index ? "rotate" : ""
-                  }`}
-                >
-                  ▼
-                </span>
+                {openIndex === index && (
+                  <div className="faq-answer">
+                    {item.answer}
+                  </div>
+                )}
               </div>
-
-              {openIndex === index && (
-                <p className="faq-answer">{item.answer}</p>
-              )}
-
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+      
 
       </div>
     </section>
   );
-};
-
-export default FAQS;
+}

@@ -67,7 +67,7 @@ align-items:center;
 justify-content:space-between;
 padding:0 25px;
 
-background:black;
+background:rgba(23, 39, 77, 0.5);
 border-radius:40px;
 }
 
@@ -112,7 +112,7 @@ font-size:14px;
 .hero-content{
 position:relative;
 text-align:center;
-color:white;
+color:rgba(255, 255, 255, 1);
 max-width:850px;
 padding:20px;
 }
@@ -127,6 +127,7 @@ margin-bottom:20px;
 font-size:18px;
 opacity:0.9;
 margin-bottom:35px;
+color:rgba(255, 255, 255, 1);
 }
 
 /* HERO BUTTONS */
@@ -195,7 +196,7 @@ top:0;
 right:-100%;
 width:260px;
 height:100vh;
-background:#111;
+background:white;
 display:flex;
 flex-direction:column;
 padding:80px 30px;

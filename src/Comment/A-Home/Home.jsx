@@ -45,7 +45,7 @@ export default function NavbarHero() {
             </li>
 
             <li>
-              <NavLink to="/F-Blogs">Blog</NavLink>
+              <NavLink to="/Blogs">Blog</NavLink>
             </li>
 
             <li>

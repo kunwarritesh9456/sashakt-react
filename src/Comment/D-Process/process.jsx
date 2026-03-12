@@ -23,7 +23,7 @@ function Journey() {
                 Understanding requirements, budget, site conditions, and
                 lifestyle or business goals through meetings and site visits.
               </p>
-              <img src="public/process.png" alt="Discovery" />
+              <img src="process.png" alt="Discovery" />
             </div>
 
             <div className="card-to">
