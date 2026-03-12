@@ -1,4 +1,4 @@
-import "./Footer.css"
+import "./footer.css"
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
