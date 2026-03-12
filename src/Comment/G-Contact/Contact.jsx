@@ -1,8 +1,19 @@
+import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import "./Contact.css";
 
 export default function Contact() {
-  return (
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setSubmitted(true);
+
+    e.target.reset();
+  };
+
+ return (
     <section className="contact-section">
       <div className="contact-wrapper">
         {/* BACKGROUND IMAGE */}
@@ -53,7 +64,7 @@ export default function Contact() {
         </div>
 
         {/* RIGHT FORM */}
-        <div className="contact-form">
+        <form className="contact-form" onSubmit={handleSubmit}>
           <label>Enter your Name</label>
           <input placeholder="Aayush Gupta" />
 
@@ -69,9 +80,15 @@ export default function Contact() {
           <label>Enter the Message</label>
           <textarea placeholder="Tell us about your project, goals, or questions" />
 
-          <button>Submit Message</button>
+          <button type="submit">Submit Message</button>
+
+        {submitted && (
+       <p className="success-message">
+         ✅ Message Submitted Successfully!
+        </p>
+       )} 
+        </form>
         </div>
-      </div>
     </section>
   );
 }

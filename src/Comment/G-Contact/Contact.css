@@ -16,7 +16,7 @@
 }
 
 /* ===============================
-   MAIN WRAPPER
+   MAIN WRAPPERa
 ================================ */
 .contact-wrapper {
   position: relative;
@@ -229,4 +229,16 @@
     margin: 20px;
     padding: 28px;
   }
+}
+/* SUCCESS MESSAGE */
+
+.success-message{
+  color:#00ff88;
+  font-weight:600;
+  margin-top:12px;
+  font-size:14px;
+  background:rgba(0,0,0,0.55);
+  padding:8px 12px;
+  border-radius:8px;
+  width:fit-content;
 }
